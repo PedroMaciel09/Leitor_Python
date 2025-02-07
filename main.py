@@ -5,11 +5,16 @@ habilitado = arquivo.readable()
 
 if habilitado == True:
     print("Arquivo habilitado para leitura.")
-    time.sleep(2)
+    time.sleep(1)
 else:
     print("O arquivo não pôde ser lido.")
     
 
-print(arquivo.readlines())
+linha = arquivo.readline()
+
+while linha:
+    print(linha)
+    linha = arquivo.readline()
+    time.sleep(1)
 
 arquivo.close()
